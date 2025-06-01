@@ -1,0 +1,38 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "command": "workbench.view.explorer",
+    "key": "alt+m"
+  },
+  {
+    "command": "-workbench.view.explorer",
+    "key": "ctrl+shift+e",
+    "when": "viewContainer.workbench.view.explorer.enabled"
+  },
+  {
+    "command": "workbench.view.search",
+    "key": "alt+,"
+  },
+  {
+    "command": "-workbench.view.search",
+    "key": "ctrl+shift+f",
+    "when": "workbench.view.search.active && neverMatch =~ /doesNotMatch/"
+  },
+  {
+    "command": "workbench.view.scm",
+    "key": "alt+."
+  },
+  {
+    "command": "-workbench.view.scm",
+    "key": "ctrl+shift+g",
+    "when": "workbench.scm.active"
+  },
+  {
+    "command": "workbench.action.toggleSidebarVisibility",
+    "key": "alt+/"
+  },
+  {
+    "command": "-workbench.action.toggleSidebarVisibility",
+    "key": "ctrl+b"
+  }
+]

@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Run a command with this script (bash) as its parent process, and make the
+# newly spawned child process the leader process of a new process group.
+# Terminating this parent script terminates the entire new process group.
+# This provides an easy way to manage the lifetime of a child process and its
+# entire process group.
+# Do not use SIGKILL to terminate this parent script, as that signal cannot be
+# caught and handled.
+
+if (( $# == 0 ))
+then
+  echo "Command not specified" >&2
+  exit 2
+fi
+
+pgid=
+
+handle_termination() {
+  pkill -g $pgid
+}
+
+trap "handle_termination" SIGHUP SIGINT SIGQUIT SIGTERM
+
+setpgid $@ &
+pgid=$!
+wait

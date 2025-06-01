@@ -1,0 +1,3 @@
+#!/bin/bash
+
+exec ps -e -o pid,ppid,pgid,sid,cmd --forest "$@"

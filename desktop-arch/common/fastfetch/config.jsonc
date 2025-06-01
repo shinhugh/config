@@ -1,0 +1,68 @@
+{
+  "logo": {
+    "type": "kitty-direct",
+    "source": "~/.config/fastfetch/logo.png",
+    "preserveAspectRatio": true,
+    "width": 38,
+    "recache": true
+  },
+  "modules": [
+    {
+      "type": "cpu",
+      "format": "{name}",
+      "keyWidth": 11
+    },
+    {
+      "type": "memory",
+      "keyWidth": 11
+    },
+    {
+      "type": "disk",
+      "key": "Disk",
+      "format": "[{mountpoint}] {size-used} / {size-total} ({size-percentage})",
+      "keyWidth": 11
+    },
+    {
+      "type": "gpu",
+      "format": "{name}",
+      "keyWidth": 11
+    },
+    {
+      "type": "display",
+      "key": "Display",
+      "format": "{inch}\" {width}x{height} @ {refresh-rate} Hz",
+      "order": "desc",
+      "keyWidth": 11
+    },
+    "break",
+    {
+      "type": "kernel",
+      "keyWidth": 11
+    },
+    {
+      "type": "os",
+      "format": "{name}",
+      "keyWidth": 11
+    },
+    {
+      "type": "wm",
+      "keyWidth": 11
+    },
+    {
+      "type": "shell",
+      "keyWidth": 11
+    },
+    {
+      "type": "terminal",
+      "keyWidth": 11
+    },
+    {
+      "type": "terminalfont",
+      "key": "Font",
+      "format": "{name}",
+      "keyWidth": 11
+    },
+    "break",
+    "colors"
+  ]
+}

@@ -1,0 +1,18 @@
+@-moz-document url-prefix("about:") {
+  * {
+    --color-bg: #2e3440;
+
+    --newtab-background-color: var(--color-bg) !important;
+    --in-content-page-background: var(--color-bg) !important;
+  }
+
+  /* Home page settings button */
+  .personalize-button {
+    display: none !important;
+  }
+
+  /* Private browsing mode description */
+  .showPrivate {
+    display: none !important;
+  }
+}

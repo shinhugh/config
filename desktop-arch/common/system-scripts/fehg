@@ -1,0 +1,3 @@
+#!/bin/bash
+
+exec feh -. -g "1200x800" -N --info "echo %f; echo %wx%h" --draw-tinted -q "$@"

@@ -53,6 +53,9 @@
 |   |     Bash script that is run at the start of every new Bash instance
 |   |     Configures interactive Bash instances
 |   |
+|   +-  .vimrc
+|   |     Configurations for Vim
+|   |
 |   +-  .config/
 |         Configurations for programs
 |
@@ -71,8 +74,31 @@
         |     Bash script that is run at the start of every new Bash instance
         |     Configures interactive Bash instances
         |
+        +-  .vimrc
+        |     Configurations for Vim
+        |
+        +-  .gitconfig
+        |     Configurations for Git
+        |
         +-  .config/
         |     Configurations for programs
+        |
+        +-  .ssh/
+        |     SSH keys
+        |
+        +-  .mozilla/
+        |   |
+        |   +-  firefox/
+        |       |
+        |       +-  <Firefox profile>/
+        |           |
+        |           +-  chrome/
+        |               |
+        |               +-  userChrome.css
+        |               |     CSS styling overrides for Firefox UI
+        |               |
+        |               +-  userContent.css
+        |                     CSS styling overrides for Firefox content
         |
         +-  scripts/
               Personal scripts

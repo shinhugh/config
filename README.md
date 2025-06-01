@@ -5,7 +5,11 @@ Personal configurations for my OS environments and programs
 ## File structure of project
 
 The location of a program's configurations is determined by whether they depend
-on the device and whether they depend on the theme.
+on the device and whether they depend on the theme. For example, Vim's
+configurations remain constant regardless of what device Vim is running on and
+what theme the device is using (because colors are determined by the terminal),
+whereas Hyprland's configurations will greatly vary according to both the device
+and the desired theme.
 
 The first directory in the path refers to the target device, and the second
 directory in the path refers to the target theme. The path is as such:
@@ -33,14 +37,20 @@ config/
 |   |   +-  fonts/
 |   |   |     Fonts
 |   |   |
-|   |   +-  <Program name>/
-|   |         Configurations for program
+|   |   +-  code/
+|   |   |     Configurations for Visual Studio Code
+|   |   |
+|   |   +-  ranger/
+|   |   |     Configurations for Ranger
+|   |   |
+|   |   +-  vim/
+|   |         Configurations for Vim
 |   |
 |   +-  nord/
 |   |   | Configurations specific to the Nord theme (but common across devices)
 |   |   |
-|   |   +-  <Program name>/
-|   |         Configurations for program
+|   |   +-  firefox/
+|   |         Configurations for Firefox
 |   |
 |   +-  ...
 |         Configurations specific to other themes (but common across devices)
@@ -61,8 +71,17 @@ config/
 |   |   |     configurations
 |   |   |     Should be copied to somewhere inside user's home directory
 |   |   |
-|   |   +-  <Program name>/
-|   |         Configurations for program
+|   |   +-  font-config/
+|   |   |     Configurations for font matching
+|   |   |
+|   |   +-  bash/
+|   |   |     Configurations for Bash
+|   |   |
+|   |   +-  fastfetch/
+|   |   |     Configurations for Fastfetch
+|   |   |
+|   |   +-  hyprpaper/
+|   |         Configurations for Hyprpaper
 |   |
 |   +-  nord/
 |   |   | Configurations specific to the Nord theme (and specific to the device)
@@ -75,8 +94,17 @@ config/
 |   |   +-  wallpapers/
 |   |   |     Wallpapers
 |   |   |
-|   |   +-  <Program name>/
-|   |         Configurations for program
+|   |   +-  eww/
+|   |   |     Configurations for Eww
+|   |   |
+|   |   +-  fuzzel/
+|   |   |     Configurations for Fuzzel
+|   |   |
+|   |   +-  hyprland/
+|   |   |     Configurations for Hyprland
+|   |   |
+|   |   +-  kitty/
+|   |         Configurations for Kitty
 |   |
 |   +-  ...
 |         Configurations specific to other themes (and specific to the device)

@@ -1,0 +1,230 @@
+(defvar hour "")
+(defvar minute "")
+(defvar date "")
+(defvar workspace_1 "")
+(defvar workspace_2 "")
+(defvar workspace_3 "")
+(defvar workspace_4 "")
+(defvar workspace_5 "")
+(defvar workspace_6 "")
+(defvar workspace_7 "")
+(defvar workspace_8 "")
+(defvar workspace_9 "")
+(defvar workspace_10 "")
+(defvar network_connectivity false)
+(defvar vpn_connectivity false)
+(defvar audio_volume 0)
+(defvar systray_visibility false)
+
+(defwindow main
+  :monitor 0
+  :geometry (geometry
+    :x "0"
+    :y "0"
+    ; :width "120px"
+    :width "80px"
+    :height "1440px"
+    :anchor "center left")
+  :stacking "bottom"
+  :exclusive false
+  :focusable false
+  (box
+    :class "root"
+    :orientation "v"
+    :space-evenly false
+
+    (box
+      :class "root_segment vertical_container_small_gap timedate_container"
+      :orientation "v"
+      :space-evenly false
+      (box
+        :class "time_container"
+        :orientation "v"
+        :space-evenly false
+        hour
+        minute)
+      (label
+        :class "date"
+        :text date))
+    (box
+      :height 40
+      :width 0)
+    (box
+      :class "root_segment vertical_container_small_gap workspaces_container"
+      :orientation "v"
+      :space-evenly false
+      (box
+        :space-evenly false
+        "1"
+        (label
+          :class "font_iconfont workspace_indicator_active"
+          :visible {workspace_1 == "active"}
+          :text "")
+        (label
+          :class "font_material_icons_sharp workspace_indicator_inactive"
+          :visible {workspace_1 == "inactive"}
+          :text ""))
+      (box
+        :space-evenly false
+        "2"
+        (label
+          :class "font_iconfont workspace_indicator_active"
+          :visible {workspace_2 == "active"}
+          :text "")
+        (label
+          :class "font_material_icons_sharp workspace_indicator_inactive"
+          :visible {workspace_2 == "inactive"}
+          :text ""))
+      (box
+        :space-evenly false
+        "3"
+        (label
+          :class "font_iconfont workspace_indicator_active"
+          :visible {workspace_3 == "active"}
+          :text "")
+        (label
+          :class "font_material_icons_sharp workspace_indicator_inactive"
+          :visible {workspace_3 == "inactive"}
+          :text ""))
+      (box
+        :space-evenly false
+        "4"
+        (label
+          :class "font_iconfont workspace_indicator_active"
+          :visible {workspace_4 == "active"}
+          :text "")
+        (label
+          :class "font_material_icons_sharp workspace_indicator_inactive"
+          :visible {workspace_4 == "inactive"}
+          :text ""))
+      (box
+        :space-evenly false
+        "5"
+        (label
+          :class "font_iconfont workspace_indicator_active"
+          :visible {workspace_5 == "active"}
+          :text "")
+        (label
+          :class "font_material_icons_sharp workspace_indicator_inactive"
+          :visible {workspace_5 == "inactive"}
+          :text "")))
+    (box
+      :height 40
+      :width 0)
+    (box
+      :class "root_segment vertical_container_small_gap workspaces_container"
+      :orientation "v"
+      :space-evenly false
+      (box
+        :space-evenly false
+        "Q"
+        (label
+          :class "font_iconfont workspace_indicator_active"
+          :visible {workspace_6 == "active"}
+          :text "")
+        (label
+          :class "font_material_icons_sharp workspace_indicator_inactive"
+          :visible {workspace_6 == "inactive"}
+          :text ""))
+      (box
+        :space-evenly false
+        "W"
+        (label
+          :class "font_iconfont workspace_indicator_active"
+          :visible {workspace_7 == "active"}
+          :text "")
+        (label
+          :class "font_material_icons_sharp workspace_indicator_inactive"
+          :visible {workspace_7 == "inactive"}
+          :text ""))
+      (box
+        :space-evenly false
+        "E"
+        (label
+          :class "font_iconfont workspace_indicator_active"
+          :visible {workspace_8 == "active"}
+          :text "")
+        (label
+          :class "font_material_icons_sharp workspace_indicator_inactive"
+          :visible {workspace_8 == "inactive"}
+          :text ""))
+      (box
+        :space-evenly false
+        "R"
+        (label
+          :class "font_iconfont workspace_indicator_active"
+          :visible {workspace_9 == "active"}
+          :text "")
+        (label
+          :class "font_material_icons_sharp workspace_indicator_inactive"
+          :visible {workspace_9 == "inactive"}
+          :text ""))
+      (box
+        :space-evenly false
+        "T"
+        (label
+          :class "font_iconfont workspace_indicator_active"
+          :visible {workspace_10 == "active"}
+          :text "")
+        (label
+          :class "font_material_icons_sharp workspace_indicator_inactive"
+          :visible {workspace_10 == "inactive"}
+          :text "")))
+    (box
+      :vexpand true
+      :width 0)
+    (box
+      :class "root_segment vertical_container_small_gap"
+      :orientation "v"
+      :space-evenly false
+      (box
+        :orientation "v"
+        :space-evenly false
+        :visible systray_visibility
+        (systray
+          :orientation "v"
+          :space-evenly false
+          :spacing 10
+          :icon-size 30
+          :prepend-new false))
+      (button
+        :class "font_iconfont systray_toggle"
+        :onclick "if [ $(eww get systray_visibility) == \"true\" ]; then eww update systray_visibility=\"false\"; else eww update systray_visibility=\"true\"; fi"
+        :halign "center"
+        {systray_visibility ? "" : ""}))
+    (box
+      :height 40
+      :width 0)
+    (box
+      :class "root_segment font_iconfont network_container"
+      :space-evenly false
+      (label
+        :class "network_label"
+        :text "")
+      (box
+        :hexpand true
+        :height 0)
+      (label
+        :class "network_indicator"
+        :text {!network_connectivity ? "" : vpn_connectivity ? "" : ""}))
+    (box
+      :height 40
+      :width 0)
+    (box
+      :class "root_segment audio_volume_container"
+      :space-evenly false
+      (box
+        :class "audio_volume_container_left_section"
+        :orientation "v"
+        :space-evenly false
+        (label
+          :class "font_iconfont audio_volume_icon"
+          :text {audio_volume > 0 ? "" : ""})
+        audio_volume)
+      (box
+        :hexpand true
+        :height 0)
+      (progress
+        :orientation "v"
+        :flipped true
+        :value audio_volume))))

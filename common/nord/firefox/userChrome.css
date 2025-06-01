@@ -1,0 +1,6 @@
+* {
+  --tabpanel-background-color: transparent !important;
+  --tab-selected-shadow: none;
+
+  font-family: monospace;
+}
