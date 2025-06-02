@@ -1,6 +1,157 @@
 # Desktop running Arch Linux
 
-## Relevant paths
+## Installation
+
+Follow the official Arch Linux installation guide, but take note of the
+following points.
+
+### Mount partitions
+
+The guide instructs to mount the EFI partition at `/boot/`, but this causes the
+Linux kernel and initial ramdisk images to be installed in the EFI partition.
+This is not ideal for a device with multiple operating systems because the
+EFI partition should be seen as a common space, not owned by this Arch Linux
+instance. It is better for these images to reside in the root partition, both to
+minimize confusion and to protect the images from other operating systems that
+may overwrite them.
+
+Use the following mounting configuration:
+
+| path         | partition      |
+| ------------ | -------------- |
+| `/`          | root partition |
+| `/boot/efi/` | EFI partition  |
+
+The kernel and initial ramdisk images will still be installed to `/boot/`, but
+this directory is inside the root partition, not the EFI partition, which is the
+intended configuration.
+
+Grub fully supports running images that reside outside of the EFI partition, so
+there is nothing special to be done here. `grub-mkconfig` will automatically
+handle this by scanning all partitions for kernel and initial ramdisk images.
+
+### Allow `sudo` without password
+
+Use `visudo` and add the following:
+
+```
+%wheel ALL=(ALL:ALL) NOPASSWD: ALL
+```
+
+Add the user to the `wheel` group:
+
+```
+sudo usermod -a -G wheel <user>
+```
+
+### Set default audio output device
+
+List the available audio devices for WirePlumber:
+
+```
+wpctl status
+```
+
+Take note of the target sink's ID from the above output, and configure the
+default sink:
+
+```
+wpctl set-default <ID>
+```
+
+### Configure Firefox
+
+Go through and tweak all of Firefox's main settings.
+
+Navigate to `about:config` and set the following configuration:
+
+- `full-screen-api.ignore-widgets` - `true`
+
+Install the following extensions:
+
+- uBlock Origin
+- Dark Background and Light Text
+- BetterTTV
+
+Configure the `Dark Background and Light Text` extension to match the rest of
+the desktop.
+
+Set the following keyboard shortcuts for the `Dark Background and Light Text`
+extension:
+
+- `Shift+Alt+A` - Toggle enabled globally
+- `Shift+Alt+Z` - Toggle enabled for current tab
+
+Install a theme that matches the rest of the desktop.
+
+Navigate to `about:profiles` and create a new profile with the name `kiosk`.
+
+Repeat the above configurations for this new profile. Only for this profile,
+enable the setting `Allow pages to choose their own fonts`.
+
+## Packages
+
+### System core packages
+
+- `amd-ucode`
+- `base`
+- `efibootmgr`
+- `git`
+- `grub`
+- `linux`
+- `linux-firmware`
+- `networkmanager`
+- `ntfs-3g`
+- `openssh`
+- `os-prober`
+- `paru`
+- `pipewire-pulse`
+- `wireguard-tools`
+
+### Session core packages
+
+- `eww`
+- `fcitx5`
+- `fcitx5-configtool`
+- `fcitx5-hangul`
+- `fuzzel`
+- `grim`
+- `hyprland`
+- `hyprpaper`
+- `logiops`
+- `slurp`
+- `socat` (hyprland event monitoring for updating eww)
+- `uwsm`
+- `wl-clip-persist`
+
+### Application packages
+
+- `code`
+- `discord`
+- `fastfetch`
+- `feh`
+- `firefox`
+- `font-manager`
+- `gimp`
+- `kitty`
+- `python-pillow` (ranger image preview)
+- `ranger`
+- `unzip`
+- `vim`
+- `zip`
+
+### Font packages
+
+- `noto-fonts`
+- `noto-fonts-cjk`
+- `noto-fonts-emoji`
+- `ttf-material-icons-git`
+
+## File import
+
+Copy files from this repository to the appropriate locations on the device.
+
+Refer to the following map to determine where to place files:
 
 ```
 /
