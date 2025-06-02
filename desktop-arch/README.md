@@ -1,5 +1,9 @@
 # Desktop running Arch Linux
 
+![Screenshot: Floating windows](assets/floating.png)
+
+![Screenshot: Tiled windows](assets/tiled.png)
+
 ## Installation
 
 Follow the official Arch Linux installation guide, but take note of the
