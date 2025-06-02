@@ -1,0 +1,7 @@
+[core]
+  autocrlf = input
+[init]
+	defaultBranch = main
+[user]
+  name = Hugh Shin
+	email = hughbee135@gmail.com

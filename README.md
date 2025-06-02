@@ -40,6 +40,9 @@ config/
 |   |   +-  code/
 |   |   |     Configurations for Visual Studio Code
 |   |   |
+|   |   +-  git/
+|   |   |     Configurations for Git
+|   |   |
 |   |   +-  ranger/
 |   |   |     Configurations for Ranger
 |   |   |
