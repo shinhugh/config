@@ -44,6 +44,14 @@ Add the user to the `wheel` group:
 sudo usermod -a -G wheel <user>
 ```
 
+### Enable services
+
+Run the following command:
+
+```
+sudo systemctl enable --now logid
+```
+
 ### Set default audio output device
 
 List the available audio devices for WirePlumber:
@@ -58,6 +66,45 @@ default sink:
 ```
 wpctl set-default <ID>
 ```
+
+### Configure VPN
+
+Download the Wireguard `.conf` file from the VPN provider.
+
+Run the following command to import the connection profile:
+
+```
+nmcli connection import type wireguard file <.conf file>
+```
+
+It's likely that Network Manager immediately activates the new connection
+profile; check with `nmcli connection show --active`. If so, deactivate it with
+`nmcli connection down <name>`.
+
+Run the following commands to modify the imported connection profile:
+
+```
+nmcli connection modify <name> connection.autoconnect no
+nmcli connection modify <name> connection.interface-name vpn
+nmcli connection modify <name> connection.id vpn-<country>-<region>
+```
+
+Use `nmtui` to enable/disable the VPN.
+
+### Configure Fcitx5
+
+Add the Hangul input method.
+
+Set the `Trigger Input Method` hotkey setting to `Alt+Right Shift`. Set all of
+the other hotkey settings to `Empty`.
+
+### Modify XDG `.desktop` entries
+
+Open `/usr/share/applications/feh.desktop` and replace `feh` with `fehg` in the
+`Exec` field.
+
+Open `/usr/share/applications/firefox.desktop` and add the `--private-window`
+option to the `Exec` field.
 
 ### Configure Firefox
 
@@ -161,6 +208,9 @@ Refer to the following map to determine where to place files:
 |   +-  inputrc
 |   |     Configurations for programs that use GNU readline
 |   |
+|   +-  logid.cfg
+|   |     Configurations for Logiops
+|   |
 |   +-  fonts/
 |       |
 |       +-  local.conf
@@ -172,25 +222,30 @@ Refer to the following map to determine where to place files:
 +-  usr/
 |   |
 |   +-  local/
+|   |   |
+|   |   +-  share/
+|   |   |   |
+|   |   |   +-  fonts/
+|   |   |       |
+|   |   |       +-  otf/
+|   |   |       |     OpenType fonts
+|   |   |       |
+|   |   |       +-  ttf/
+|   |   |             TrueType fonts
+|   |   |
+|   |   +-  bin/
+|   |         Custom scripts and programs executable by all users
+|   |         On PATH by default
+|   |         Many scripts here function like global aliases, simply running
+|   |         existing commands with common options, accessible by all users
+|   |         Scripts that do user-specific tasks and pull from user-specific
+|   |         configurations should go in the user's home directory instead
+|   |         (e.g. /home/polyrei/scripts/)
+|   |
+|   +-  share/
 |       |
-|       +-  share/
-|       |   |
-|       |   +-  fonts/
-|       |       |
-|       |       +-  otf/
-|       |       |     OpenType fonts
-|       |       |
-|       |       +-  ttf/
-|       |             TrueType fonts
-|       |
-|       +-  bin/
-|             Custom scripts and programs executable by all users
-|             On PATH by default
-|             Many scripts here function like global aliases, simply running
-|             existing commands with common options, accessible by all users
-|             Scripts that do user-specific tasks and pull from user-specific
-|             configurations should go in the user's home directory instead
-|             (e.g. /home/polyrei/scripts/)
+|       +-  applications/
+|             XDG desktop entries
 |
 +-  root/
 |   | Home directory for root user

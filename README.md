@@ -81,7 +81,10 @@ config/
 |   |   |     Configurations for Fastfetch
 |   |   |
 |   |   +-  hyprpaper/
-|   |         Configurations for Hyprpaper
+|   |   |     Configurations for Hyprpaper
+|   |   |
+|   |   +-  logiops/
+|   |         Configurations for Logiops
 |   |
 |   +-  nord/
 |   |   | Configurations specific to the Nord theme (and specific to the device)
