@@ -87,7 +87,10 @@ config/
 |   |   |     Configurations for Hyprpaper
 |   |   |
 |   |   +-  logiops/
-|   |         Configurations for Logiops
+|   |   |     Configurations for Logiops
+|   |   |
+|   |   +-  uwsm/
+|   |         Configurations for Universal Wayland Session Manager
 |   |
 |   +-  nord/
 |   |   | Configurations specific to the Nord theme (and specific to the device)
