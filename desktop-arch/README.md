@@ -161,17 +161,20 @@ profile should be the following:
 
 - `amd-ucode`
 - `base`
+- `base-devel` (package builds run by Paru)
 - `efibootmgr`
 - `git`
 - `grub`
 - `linux`
 - `linux-firmware`
+- `man-db`
 - `networkmanager`
 - `ntfs-3g`
 - `openssh`
 - `os-prober`
 - `paru`
 - `pipewire-pulse`
+- `sudo`
 - `wireguard-tools`
 
 ### Session core packages
@@ -186,7 +189,7 @@ profile should be the following:
 - `hyprpaper`
 - `logiops`
 - `slurp`
-- `socat` (hyprland event monitoring for updating eww)
+- `socat` (Hyprland event monitoring for updating Eww)
 - `uwsm`
 - `wl-clip-persist`
 
@@ -200,7 +203,7 @@ profile should be the following:
 - `font-manager`
 - `gimp`
 - `kitty`
-- `python-pillow` (ranger image preview)
+- `python-pillow` (Ranger image preview)
 - `ranger`
 - `unzip`
 - `vim`
