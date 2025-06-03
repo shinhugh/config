@@ -48,6 +48,14 @@ Add the user to the `wheel` group:
 sudo usermod -a -G wheel <user>
 ```
 
+### Configure GNU readline autocompletion to be case-insensitive
+
+Add the following line to `/etc/inputrc`:
+
+```
+set completion-ignore-case On
+```
+
 ### Enable services
 
 Run the following command:
