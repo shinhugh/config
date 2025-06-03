@@ -104,8 +104,9 @@ the other hotkey settings to `Empty`.
 
 ### Modify XDG `.desktop` entries
 
-Open `/usr/share/applications/feh.desktop` and replace `feh` with `fehg` in the
-`Exec` field.
+Open `/usr/share/applications/feh.desktop`, replace `feh` with `fehg` in the
+`Exec` field, and remove all other existing options (e.g. `--start-at`). Do not
+remove the final argument (`%u`).
 
 Open `/usr/share/applications/firefox.desktop` and add the `--private-window`
 option to the `Exec` field.
