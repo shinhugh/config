@@ -123,8 +123,9 @@ option to the `Exec` field.
 
 Go through and tweak all of Firefox's main settings.
 
-Navigate to `about:config` and set the following configuration:
+Navigate to `about:config` and set the following configurations:
 
+- `toolkit.legacyUserProfileCustomizations.stylesheets` - `true`
 - `full-screen-api.ignore-widgets` - `true`
 
 Install the following extensions:
@@ -146,8 +147,11 @@ Install a theme that matches the rest of the desktop.
 
 Navigate to `about:profiles` and create a new profile with the name `kiosk`.
 
-Repeat the above configurations for this new profile. Only for this profile,
-enable the setting `Allow pages to choose their own fonts`.
+Repeat the above configurations for this new profile. The differences for this
+profile should be the following:
+
+- Disable the setting `Allow pages to choose their own fonts`.
+- Disable the setting `Open links in tabs instead of new windows`.
 
 ## Packages
 
