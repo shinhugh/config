@@ -83,10 +83,13 @@ wpctl set-default <ID>
 
 Download the Wireguard `.conf` file from the VPN provider.
 
+Rename the file to `vpn-<country>-<region>.conf`. `<name>` will be used to refer
+to `vpn-<country>-<region>` below. `<name>` can be at most 15 characters long.
+
 Run the following command to import the connection profile:
 
 ```
-nmcli connection import type wireguard file <.conf file>
+nmcli connection import type wireguard file <name>.conf
 ```
 
 It's likely that Network Manager immediately activates the new connection
@@ -98,7 +101,6 @@ Run the following commands to modify the imported connection profile:
 ```
 nmcli connection modify <name> connection.autoconnect no
 nmcli connection modify <name> connection.interface-name vpn
-nmcli connection modify <name> connection.id vpn-<country>-<region>
 ```
 
 Use `nmtui` to enable/disable the VPN.
