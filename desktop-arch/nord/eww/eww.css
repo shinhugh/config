@@ -46,8 +46,7 @@ button {
 }
 
 .root {
-  /* padding: 40px 40px 40px 0; */
-  padding: 40px 0;
+  padding: 40px 40px 40px 0;
   font-family: monospace;
   font-size: 22px;
 }

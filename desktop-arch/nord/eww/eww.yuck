@@ -21,8 +21,7 @@
   :geometry (geometry
     :x "0"
     :y "0"
-    ; :width "120px"
-    :width "80px"
+    :width "120px"
     :height "1440px"
     :anchor "center left")
   :stacking "bottom"
