@@ -1,3 +1,3 @@
 #!/bin/bash
 
-exec ls -AF "$@"
+exec ls -AF --group-directories-first "$@"
