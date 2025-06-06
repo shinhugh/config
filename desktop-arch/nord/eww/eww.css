@@ -124,4 +124,5 @@ button {
 .audio_volume_container progressbar>trough>progress {
   min-width: 5px;
   background-color: #d8dee9;
+  border: none;
 }
