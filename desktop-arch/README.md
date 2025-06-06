@@ -129,6 +129,7 @@ Navigate to `about:config` and set the following configurations:
 
 - `toolkit.legacyUserProfileCustomizations.stylesheets` - `true`
 - `full-screen-api.ignore-widgets` - `true`
+- `browser.fullscreen.autohide` - `false`
 
 Install the following extensions:
 
