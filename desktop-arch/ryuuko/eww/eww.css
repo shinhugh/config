@@ -39,7 +39,7 @@ button {
   padding: 20px 40px 25px 0;
   font-family: monospace;
   font-size: 22px;
-  color: #ececec;
+  color: #6a8e95;
 }
 
 .time_container {
@@ -110,6 +110,6 @@ button {
 
 .audio_volume_container progressbar>trough>progress {
   min-width: 5px;
-  background-color: #ececec;
+  background-color: #6a8e95;
   border: none;
 }
