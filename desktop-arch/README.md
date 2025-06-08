@@ -308,6 +308,9 @@ Refer to the following map to determine where to place files:
         |     Bash script that is run at the start of every new Bash instance
         |     Configures interactive Bash instances
         |
+        +-  .Xresources
+        |     Visual configurations for various applications
+        |
         +-  .vimrc
         |     Configurations for Vim
         |

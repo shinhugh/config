@@ -113,7 +113,10 @@ config/
 |   |   |     Configurations for Hyprland
 |   |   |
 |   |   +-  kitty/
-|   |         Configurations for Kitty
+|   |   |     Configurations for Kitty
+|   |   |
+|   |   +-  xresources/
+|   |         Visual configurations for various applications
 |   |
 |   +-  ...
 |         Configurations specific to other themes (and specific to the device)
