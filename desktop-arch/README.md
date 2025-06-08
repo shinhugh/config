@@ -137,16 +137,14 @@ Install the following extensions:
 - Dark Background and Light Text
 - BetterTTV
 
-Configure the `Dark Background and Light Text` extension to match the rest of
-the desktop.
+Configure the `Dark Background and Light Text` extension to match the provided
+theme.
 
 Set the following keyboard shortcuts for the `Dark Background and Light Text`
 extension:
 
 - `Shift+Alt+A` - Toggle enabled globally
 - `Shift+Alt+Z` - Toggle enabled for current tab
-
-Install a theme that matches the rest of the desktop.
 
 Navigate to `about:profiles` and create a new profile with the name `kiosk`.
 
@@ -156,9 +154,6 @@ profile should be the following:
 - Disable the setting `Allow pages to choose their own fonts`.
 - Disable the setting `Open links in tabs instead of new windows`.
 - Leave the `browser.fullscreen.autohide` configuration as `true`.
-- Don't install any themes. This profile is used for kiosk mode only, which
-hides the browser UI. Use the default light or dark theme, depending on the
-color scheme set for the `Dark Background and Light Text` extension.
 
 ## Packages
 
