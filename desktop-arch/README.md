@@ -156,7 +156,8 @@ profile should be the following:
 - Disable the setting `Allow pages to choose their own fonts`.
 - Disable the setting `Open links in tabs instead of new windows`.
 - Don't install any themes. This profile is used for kiosk mode only, which
-hides the browser UI.
+hides the browser UI. Use the default light or dark theme, depending on the
+color scheme set for the `Dark Background and Light Text` extension.
 
 ## Packages
 
