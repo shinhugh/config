@@ -48,6 +48,20 @@ Add the user to the `wheel` group:
 sudo usermod -a -G wheel <user>
 ```
 
+### Set the default behavior of top-row keys to be function keys
+
+Create the file `/etc/modprobe.d/hid_apple.conf` and add the following content:
+
+```
+options hid_apple fnmode=2
+```
+
+Regenerate the initial ramdisk image with the following command:
+
+```
+mkinitcpio -P
+```
+
 ### Configure GNU readline autocompletion to be case-insensitive
 
 Add the following line to `/etc/inputrc`:
