@@ -195,6 +195,7 @@ hides the browser UI.
 - `socat` (Hyprland event monitoring for updating Eww)
 - `uwsm`
 - `wl-clip-persist`
+- `xorg-xrdb` (Xresources querying for Visual Studio Code Xresources theme)
 
 ### Application packages
 
