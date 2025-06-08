@@ -1,0 +1,115 @@
+* {
+  background-color: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+button {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.vertical_container_small_gap>* {
+  margin-top: 8px;
+}
+
+.vertical_container_small_gap>:first-child {
+  margin-top: 0;
+}
+
+.horizontal_container_small_gap>* {
+  margin-left: 8px;
+}
+
+.horizontal_container_small_gap>:first-child {
+  margin-left: 0;
+}
+
+.font_iconfont {
+  font-family: "iconfont", DO_NOT_OVERRIDE;
+}
+
+.font_material_icons_sharp {
+  font-family: "Material Icons Sharp", DO_NOT_OVERRIDE;
+}
+
+.root {
+  padding: 20px 40px 25px 0;
+  font-family: monospace;
+  font-size: 22px;
+  color: #ececec;
+}
+
+.time_container {
+  font-size: 33px;
+  letter-spacing: 2px;
+}
+
+.time_container>:nth-child(2) {
+  margin-top: -10px;
+}
+
+.date {
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.workspaces_container {
+  padding-left: 21px;
+}
+
+.workspace_indicator_active {
+  padding-left: 12px;
+  font-size: 16px;
+}
+
+.workspace_indicator_inactive {
+  padding-left: 16px;
+  font-size: 8px;
+}
+
+.systray_toggle {
+  font-size: 24px;
+}
+
+.network_container {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.network_label {
+  font-size: 24px;
+}
+
+.network_indicator {
+  font-size: 16px;
+}
+
+.audio_volume_container {
+  padding-left: 18px;
+  padding-right: 18px;
+  font-size: 11px;
+}
+
+.audio_volume_container_left_section {
+  padding-top: 3px;
+}
+
+.audio_volume_icon {
+  font-size: 24px;
+  margin-bottom: 2px;
+}
+
+.audio_volume_container progressbar>trough {
+  min-width: 5px;
+  min-height: 1px;
+  border: none;
+}
+
+.audio_volume_container progressbar>trough>progress {
+  min-width: 5px;
+  background-color: #ececec;
+  border: none;
+}
