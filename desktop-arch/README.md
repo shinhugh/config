@@ -121,6 +121,24 @@ remove the final argument (`%u`).
 Open `/usr/share/applications/firefox.desktop` and add the `--private-window`
 option to the `Exec` field.
 
+### Enable dark mode for GTK applications
+
+Run the following command:
+
+```
+gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+```
+
+The UWSM configuration sets the `GTK_THEME` environment variable. This should be
+enough to enable dark mode for the vast majority of GTK applications.
+
+If `font-manager` is installed, also run the following commands:
+
+```
+gsettings set com.github.FontManager.FontManager prefer-dark-theme true
+gsettings set com.github.FontManager.FontViewer prefer-dark-theme true
+```
+
 ### Configure Firefox
 
 Go through and tweak all of Firefox's main settings.
