@@ -7,7 +7,6 @@ Discord\n\
 Fcitx5 Config\n\
 Firefox\n\
 Firefox Private\n\
-FontForge\n\
 Font Manager\n\
 Gimp\n\
 Google Drive\n\
@@ -38,9 +37,6 @@ then
 elif [ "$output" = "Firefox Private" ]
 then
   exec firefox -private-window
-elif [ "$output" = "FontForge" ]
-then
-  exec fontforge
 elif [ "$output" = "Font Manager" ]
 then
   exec font-manager
