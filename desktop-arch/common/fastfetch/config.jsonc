@@ -3,7 +3,7 @@
     "type": "kitty-direct",
     "source": "~/.config/fastfetch/logo.png",
     "preserveAspectRatio": true,
-    "width": 38,
+    "width": 37,
     "recache": true
   },
   "modules": [
