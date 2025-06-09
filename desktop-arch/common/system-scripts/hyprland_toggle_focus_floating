@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Toggle focus between floating and tiled windows in Hyprland
+
+if [[ $(hyprctl activewindow | grep -E "^	floating:" | tail -c 2 | head -c 1) == 1 ]]
+then
+  hyprctl dispatch cyclenext hist tiled
+else
+  hyprctl dispatch cyclenext hist floating
+fi
