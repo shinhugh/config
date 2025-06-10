@@ -192,6 +192,7 @@ profile should be the following:
 ### System core packages
 
 - `amd-ucode`
+- `arch-install-scripts`
 - `base`
 - `base-devel` (package builds run by Paru)
 - `efibootmgr`
