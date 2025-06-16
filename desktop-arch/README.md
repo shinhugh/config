@@ -225,6 +225,7 @@ profile should be the following:
 - `socat` (Hyprland event monitoring for updating Eww)
 - `uwsm`
 - `wl-clip-persist`
+- `xdg-desktop-portal-wlr` (screensharing)
 - `xorg-xrdb` (Xresources querying for Visual Studio Code Xresources theme)
 
 ### Application packages
