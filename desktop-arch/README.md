@@ -135,6 +135,11 @@ remove the final argument (`%u`).
 Open `/usr/share/applications/firefox.desktop` and add the `--private-window`
 option to the `Exec` field.
 
+### Modify XDG user directories
+
+After copying the `user-dirs.*` configuration files into `~/.config/`, run
+`xdg-user-dirs-update`. This should create the directory `~/dump/`.
+
 ### Enable dark mode for GTK applications
 
 Run the following command:
@@ -226,6 +231,7 @@ profile should be the following:
 - `uwsm`
 - `wl-clip-persist`
 - `xdg-desktop-portal-wlr` (screensharing)
+- `xdg-user-dirs`
 - `xorg-xrdb` (Xresources querying for Visual Studio Code Xresources theme)
 
 ### Application packages

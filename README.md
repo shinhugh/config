@@ -90,7 +90,10 @@ config/
 |   |   |     Configurations for Logiops
 |   |   |
 |   |   +-  uwsm/
-|   |         Configurations for Universal Wayland Session Manager
+|   |   |     Configurations for Universal Wayland Session Manager
+|   |   |
+|   |   +-  xdg-user-dirs-update/
+|   |         Configurations for XDG user directories
 |   |
 |   +-  nord/
 |   |   | Configurations specific to the Nord theme (and specific to the device)
