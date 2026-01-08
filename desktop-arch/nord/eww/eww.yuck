@@ -27,6 +27,7 @@
   :stacking "bottom"
   :exclusive false
   :focusable false
+  :namespace "eww"
   (box
     :class "root"
     :orientation "v"
