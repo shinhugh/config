@@ -1,7 +1,5 @@
 {
-    "C_Cpp.copilotHover": "disabled",
-    "chat.agent.enabled": false,
-    "chat.commandCenter.enabled": false,
+    "chat.disableAIFeatures": true,
     "editor.codeLens": false,
     "editor.cursorBlinking": "solid",
     "editor.dragAndDrop": false,
@@ -26,5 +24,6 @@
     "workbench.activityBar.location": "top",
     "workbench.editor.closeOnFileDelete": true,
     "workbench.editor.empty.hint": "hidden",
+    "workbench.layoutControl.enabled": false,
     "workbench.startupEditor": "none"
 }
