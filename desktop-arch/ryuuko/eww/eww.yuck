@@ -29,10 +29,10 @@
   :focusable false
   :namespace "eww"
   (box
-    :class "canvas"
+    :class "root"
     :space-evenly false
     (box
-      :class "root"
+      :class "canvas"
       :width 80
       :orientation "v"
       :space-evenly false
