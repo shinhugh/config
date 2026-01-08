@@ -25,7 +25,7 @@
     :height "1440px"
     :anchor "center left")
   :stacking "bottom"
-  :exclusive false
+  :exclusive true
   :focusable false
   :namespace "eww"
   (box
