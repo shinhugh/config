@@ -10,6 +10,7 @@ Firefox Private\n\
 Font Manager\n\
 Gimp\n\
 Google Drive\n\
+Google Home\n\
 Google Keep\n\
 Google Photos\n\
 Monkeytype\n\
@@ -47,6 +48,9 @@ then
 elif [ "$output" = "Google Drive" ]
 then
   exec firefox -P "kiosk" -new-window --kiosk https://drive.google.com/
+elif [ "$output" = "Google Home" ]
+then
+  exec firefox -P "kiosk" -new-window --kiosk https://home.google.com/
 elif [ "$output" = "Google Keep" ]
 then
   exec firefox -P "kiosk" -new-window --kiosk https://keep.google.com/
