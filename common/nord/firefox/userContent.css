@@ -4,6 +4,7 @@
 
     --newtab-background-color: var(--color-bg) !important;
     --in-content-page-background: var(--color-bg) !important;
+    --background-color-canvas: var(--color-bg) !important;
   }
 
   /* Home page settings button */
