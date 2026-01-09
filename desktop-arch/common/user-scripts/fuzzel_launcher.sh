@@ -11,6 +11,7 @@ Font Manager\n\
 Gimp\n\
 Google Drive\n\
 Google Keep\n\
+Google Photos\n\
 Monkeytype\n\
 Network Manager\n\
 Ranger\n\
@@ -49,6 +50,9 @@ then
 elif [ "$output" = "Google Keep" ]
 then
   exec firefox -P "kiosk" -new-window --kiosk https://keep.google.com/
+elif [ "$output" = "Google Photos" ]
+then
+  exec firefox -P "kiosk" -new-window --kiosk https://photos.google.com/
 elif [ "$output" = "Monkeytype" ]
 then
   exec firefox -P "kiosk" -new-window --kiosk https://monkeytype.com/
