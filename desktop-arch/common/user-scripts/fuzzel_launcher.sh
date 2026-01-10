@@ -14,6 +14,8 @@ Google Drive\n\
 Google Home\n\
 Google Keep\n\
 Google Photos\n\
+Instagram\n\
+Messenger\n\
 Monkeytype\n\
 Network Manager\n\
 Ranger\n\
@@ -61,6 +63,12 @@ then
 elif [ "$output" = "Google Photos" ]
 then
   exec firefox -P "kiosk" -new-window --kiosk https://photos.google.com/
+  elif [ "$output" = "Instagram" ]
+then
+  exec firefox -P "kiosk" -new-window --kiosk https://instagram.com/
+elif [ "$output" = "Messenger" ]
+then
+  exec firefox -P "kiosk" -new-window --kiosk https://messenger.com/
 elif [ "$output" = "Monkeytype" ]
 then
   exec firefox -P "kiosk" -new-window --kiosk https://monkeytype.com/
