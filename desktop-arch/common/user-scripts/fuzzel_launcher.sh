@@ -9,6 +9,7 @@ Firefox\n\
 Firefox Private\n\
 Font Manager\n\
 Gimp\n\
+Google Calendar\n\
 Google Drive\n\
 Google Home\n\
 Google Keep\n\
@@ -45,6 +46,9 @@ then
 elif [ "$output" = "Gimp" ]
 then
   exec gimp
+elif [ "$output" = "Google Calendar" ]
+then
+  exec firefox -P "kiosk" -new-window --kiosk https://calendar.google.com/
 elif [ "$output" = "Google Drive" ]
 then
   exec firefox -P "kiosk" -new-window --kiosk https://drive.google.com/
