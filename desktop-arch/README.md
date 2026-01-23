@@ -166,7 +166,6 @@ Navigate to `about:config` and set the following configurations:
 
 - `toolkit.legacyUserProfileCustomizations.stylesheets` - `true`
 - `full-screen-api.ignore-widgets` - `true`
-- `browser.fullscreen.autohide` - `false`
 
 Install the following extensions:
 
@@ -190,7 +189,6 @@ profile should be the following:
 
 - Disable the setting `Allow pages to choose their own fonts`.
 - Disable the setting `Open links in tabs instead of new windows`.
-- Leave the `browser.fullscreen.autohide` configuration as `true`.
 
 ## Packages
 

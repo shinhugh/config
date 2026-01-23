@@ -4,3 +4,11 @@
 
   font-family: monospace;
 }
+
+#fullscr-toggler {
+  display: none !important;
+}
+
+#navigator-toolbox[fullscreenShouldAnimate] {
+  transition: none !important;
+}
