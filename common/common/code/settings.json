@@ -9,7 +9,6 @@
         80
     ],
     "editor.tabSize": 2,
-    "editor.wordWrap": "wordWrapColumn",
     "extensions.ignoreRecommendations": true,
     "files.eol": "\n",
     "files.hotExit": "off",
