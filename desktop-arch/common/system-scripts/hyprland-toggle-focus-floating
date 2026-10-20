@@ -4,7 +4,8 @@
 
 if [[ $(hyprctl activewindow | grep -E "^	floating:" | tail -c 2 | head -c 1) == 1 ]]
 then
-  hyprctl dispatch cyclenext hist tiled
+  hyprctl dispatch "hl.dsp.window.cycle_next({ next = false, tiled = true })"
 else
-  hyprctl dispatch cyclenext hist floating
+  hyprctl dispatch "hl.dsp.window.cycle_next({ next = false, floating = true })"
+  hyprctl dispatch "hl.dsp.window.alter_zorder({ mode = \"top\" })"
 fi
