@@ -4,7 +4,7 @@
     "source": "~/.config/fastfetch/logo.png",
     "preserveAspectRatio": true,
     "width": 37,
-    "recache": true
+    "cache": "regen"
   },
   "modules": [
     {
@@ -46,6 +46,7 @@
     },
     {
       "type": "wm",
+      "key": "WM",
       "keyWidth": 11
     },
     {
