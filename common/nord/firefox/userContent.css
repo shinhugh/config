@@ -12,6 +12,16 @@
     display: none !important;
   }
 
+  /* Home page settings button */
+  menu.personalizeButtonWrapper {
+    display: none !important;
+  }
+
+  /* Private browsing mode background */
+  html.private {
+    background: var(--color-bg) !important;
+  }
+
   /* Private browsing mode description */
   .showPrivate {
     display: none !important;
