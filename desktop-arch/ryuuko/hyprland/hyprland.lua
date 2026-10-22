@@ -116,12 +116,6 @@ hl.animation({
     bezier  = "default"
 })
 hl.animation({
-    leaf    = "border",
-    enabled = true,
-    speed   = 5.39,
-    bezier  = "easeOutQuint"
-})
-hl.animation({
     leaf    = "windows",
     enabled = true,
     speed   = 4.79,
@@ -140,24 +134,6 @@ hl.animation({
     speed   = 1.49,
     bezier  = "linear",
     style   = "popin 87%"
-})
-hl.animation({
-    leaf    = "fadeIn",
-    enabled = true,
-    speed   = 1.73,
-    bezier  = "almostLinear"
-})
-hl.animation({
-    leaf    = "fadeOut",
-    enabled = true,
-    speed   = 1.46,
-    bezier  = "almostLinear"
-})
-hl.animation({
-    leaf    = "fade",
-    enabled = true,
-    speed   = 3.03,
-    bezier  = "quick"
 })
 hl.animation({
     leaf    = "layers",
@@ -180,6 +156,24 @@ hl.animation({
     style   = "fade"
 })
 hl.animation({
+    leaf    = "fade",
+    enabled = true,
+    speed   = 3.03,
+    bezier  = "quick"
+})
+hl.animation({
+    leaf    = "fadeIn",
+    enabled = true,
+    speed   = 1.73,
+    bezier  = "almostLinear"
+})
+hl.animation({
+    leaf    = "fadeOut",
+    enabled = true,
+    speed   = 1.46,
+    bezier  = "almostLinear"
+})
+hl.animation({
     leaf    = "fadeLayersIn",
     enabled = true,
     speed   = 1.79,
@@ -190,6 +184,12 @@ hl.animation({
     enabled = true,
     speed   = 1.39,
     bezier  = "almostLinear"
+})
+hl.animation({
+    leaf    = "border",
+    enabled = true,
+    speed   = 5.39,
+    bezier  = "easeOutQuint"
 })
 hl.animation({
     leaf    = "workspaces",
