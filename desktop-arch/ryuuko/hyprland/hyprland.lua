@@ -91,125 +91,76 @@ hl.curve(
         points = { { 0.23, 1 }, { 0.32, 1 } }
     })
 hl.curve(
-    "linear",
-    {
-        type   = "bezier",
-        points = { { 0, 0 }, { 1, 1 } }
-    })
-hl.curve(
     "almostLinear",
     {
         type   = "bezier",
         points = { { 0.5, 0.5 }, { 0.75, 1 } }
     })
-hl.curve(
-    "quick",
-    {
-        type   = "bezier",
-        points = { { 0.15, 0 }, { 0.1, 1 } }
-    })
 
 hl.animation({
     leaf    = "global",
     enabled = true,
-    speed   = 10,
+    speed   = 2,
     bezier  = "default"
-})
-hl.animation({
-    leaf    = "windows",
-    enabled = true,
-    speed   = 4.79,
-    bezier  = "easeOutQuint"
 })
 hl.animation({
     leaf    = "windowsIn",
     enabled = true,
-    speed   = 4.1,
+    speed   = 2,
     bezier  = "easeOutQuint",
-    style   = "popin 87%"
+    style   = "popin 80%"
 })
 hl.animation({
     leaf    = "windowsOut",
     enabled = true,
-    speed   = 1.49,
-    bezier  = "linear",
-    style   = "popin 87%"
+    speed   = 1,
+    bezier  = "almostLinear",
+    style   = "popin 90%"
 })
 hl.animation({
-    leaf    = "layers",
+    leaf    = "windowsMove",
     enabled = true,
-    speed   = 3.81,
+    speed   = 4,
     bezier  = "easeOutQuint"
 })
 hl.animation({
     leaf    = "layersIn",
     enabled = true,
-    speed   = 4,
+    speed   = 2,
     bezier  = "easeOutQuint",
     style   = "fade"
 })
 hl.animation({
     leaf    = "layersOut",
     enabled = true,
-    speed   = 1.5,
-    bezier  = "linear",
+    speed   = 1,
+    bezier  = "almostLinear",
     style   = "fade"
 })
 hl.animation({
     leaf    = "fade",
     enabled = true,
-    speed   = 3.03,
-    bezier  = "quick"
-})
-hl.animation({
-    leaf    = "fadeIn",
-    enabled = true,
-    speed   = 1.73,
-    bezier  = "almostLinear"
-})
-hl.animation({
-    leaf    = "fadeOut",
-    enabled = true,
-    speed   = 1.46,
-    bezier  = "almostLinear"
-})
-hl.animation({
-    leaf    = "fadeLayersIn",
-    enabled = true,
-    speed   = 1.79,
-    bezier  = "almostLinear"
-})
-hl.animation({
-    leaf    = "fadeLayersOut",
-    enabled = true,
-    speed   = 1.39,
-    bezier  = "almostLinear"
+    speed   = 2,
+    bezier  = "easeOutQuint"
 })
 hl.animation({
     leaf    = "border",
     enabled = true,
-    speed   = 5.39,
+    speed   = 2,
     bezier  = "easeOutQuint"
-})
-hl.animation({
-    leaf    = "workspaces",
-    enabled = true,
-    speed   = 1.94,
-    bezier  = "almostLinear",
-    style   = "fade"
 })
 hl.animation({
     leaf    = "workspacesIn",
     enabled = true,
-    speed   = 1.21,
-    bezier  = "almostLinear",
+    speed   = 2,
+    bezier  = "easeOutQuint",
     style   = "fade"
 })
 hl.animation({
     leaf    = "workspacesOut",
     enabled = true,
-    speed   = 1.94,
-    bezier  = "almostLinear",
+    speed   = 2,
+    bezier  = "easeOutQuint",
     style   = "fade"
 })
 
