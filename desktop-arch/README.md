@@ -64,9 +64,10 @@ mkinitcpio -P
 
 ### Configure GNU readline autocompletion to be case-insensitive
 
-Add the following line to `/etc/inputrc`:
+Add the following lines to `/etc/inputrc`:
 
 ```
+set bell-style none
 set completion-ignore-case On
 ```
 
